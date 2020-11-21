@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.pointer {
+  cursor: pointer;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e8e8e8;
+  font-size: 18px;
+}
+.profileContainer {
+  height: 100vh;
+  width: 100vw;
+}
+.leftSide {
+  background-image: url("./assets/profilePic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profileOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 37%,
+    rgba(0, 0, 0, 0.23153011204481788) 71%,
+    rgba(0, 0, 0, 0.458420868347339) 100%
+  );
+}
+.profileHeader {
+  position: absolute;
+  color: #ffff;
+  height: 85px;
+  width: 100%;
+  background: rgb(32, 52, 69);
+  background: linear-gradient(
+    0deg,
+    rgba(32, 52, 69, 0) 42%,
+    rgba(0, 0, 0, 0.38279061624649857) 100%
+  );
+}
+.callName {
+  font-size: 1.5em;
+  font-weight: 200;
+  max-width: 80% !important;
+  display: block;
+}
+.profileFooter {
+  position: absolute;
+  bottom: 0;
+  height: 85px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9654236694677871) 0%,
+    rgba(32, 52, 69, 0) 100%
+  );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.callLogo {
+  /* position: absolute; */
+  left: 0;
+}
+.callIcon {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.callIcon:hover {
+  box-shadow: 0px 5px 15px -1px rgba(206, 206, 206, 0.37);
+}
+.billingButton {
+  height: 28px;
+  background-color: #f8f8f89c;
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.exitButton {
+  height: 28px;
+  color: #f8f8f89c;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+  font-weight: 300;
+}
+.participantsWrapper {
+  height: 80%;
+  background-color: #646363;
+  border-radius: 8px;
+}
+.randomIcon {
+  font-size: 28px;
+  padding: 5px;
+}
+.participantsImage {
+  height: 100%;
+  width: 100px;
+}
+.participantsImage img {
+  max-width: 100%;
+  height: auto;
+}
+.participantsAnimate {
+  animation: slideRight 0.2s linear;
+}
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* billing */
+.billingWrapper {
+  background-color: #e8e8e8c7;
+  height: 100%;
+  width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.billingHeader {
+  height: 85px;
 }
