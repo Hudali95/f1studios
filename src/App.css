@@ -17,7 +17,7 @@ body {
   width: 100vw;
 }
 .leftSide {
-  background-image: url("./assets/profilePic.jpg");
+  background-image: url("./assets/p3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,6 +57,7 @@ body {
   position: absolute;
   bottom: 0;
   height: 85px;
+  font-size: 0.8rem;
   width: 100%;
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -96,8 +97,10 @@ body {
 }
 .participantsWrapper {
   height: 80%;
-  background-color: #646363;
-  border-radius: 8px;
+  background-color: #2f2f30;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.42);
 }
 .randomIcon {
   font-size: 28px;
@@ -112,7 +115,103 @@ body {
   height: auto;
 }
 .participantsAnimate {
-  animation: slideRight 0.2s linear;
+  animation: slideLeft 0.4s linear;
+}
+
+/* billing */
+.billingWrapper {
+  background-color: #f8f8f8;
+  height: 100%;
+  width: 100%;
+}
+.billingCol {
+  animation: slideLeft 0.4s linear;
+}
+.billingHeader {
+  height: 85px;
+  border-bottom: 1px solid #dcdddf;
+}
+.billingIcon {
+  height: 50px;
+}
+.billingSteps {
+  position: relative;
+  font-size: 0.8rem;
+  color: #3e5a77;
+  background-color: #eaeff5;
+}
+.stepCount {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fbfcfe;
+  color: #999fab;
+  z-index: 1;
+}
+.middleBarSpan {
+  position: absolute !important;
+
+  height: 2px;
+  background-color: #c8ccd5;
+}
+.billingFooter {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  background-color: #007dfc;
+  color: #fff;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.grandTotalDiv {
+  height: 55%;
+  background-color: #ebebeb;
+  color: #2f2f2f;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.billingSubmitButton {
+  height: 45%;
+}
+.billingBody {
+  max-height: calc(100vh - 320px);
+  overflow: scroll;
+}
+.displayRowLable {
+  font-size: 0.8rem;
+  color: rgb(127, 127, 127);
+}
+.displayRowBody {
+  padding: 5px 0px 5px 0px;
+  font-weight: 300px;
+  font-size: 0.9rem;
+}
+.displayRow {
+  border-bottom: 1px solid #c8ccd5;
+  height: 64px;
+}
+.billingBodyProductDiv {
+  background-color: #fbfcfe;
+}
+.navWrapper {
+  background-color: #f0f5fb;
+}
+.navDiv {
+  border-bottom: 1px solid #c8ccd5;
+}
+.activeNavDiv {
+  border: 1px solid #c8ccd5;
+  border-bottom: 0;
+  background-color: #fbfcfe;
+}
+.billingBodyOrderDiv {
+  margin-bottom: 200px !important;
+}
+.summarySvg {
+  position: absolute;
+  bottom: -60px;
+  left: 0px;
+  width: 100%;
 }
 @keyframes slideRight {
   0% {
@@ -122,12 +221,12 @@ body {
     opacity: 1;
   }
 }
-/* billing */
-.billingWrapper {
-  background-color: #e8e8e8c7;
-  height: 100%;
-  width: 100%;
-}
-.billingHeader {
-  height: 85px;
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

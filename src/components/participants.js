@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi";
-import prof1 from "../assets/profilePic.jpg";
-import prof2 from "../assets/prof2.jpeg";
-import prof3 from "../assets/prof.jpeg";
+import prof1 from "../assets/p3.jpg";
+import prof2 from "../assets/p4.jpg";
+import prof3 from "../assets/p2.jpg";
 
 export default class participants extends Component {
   constructor(props) {
@@ -31,9 +31,9 @@ export default class participants extends Component {
           )}
         </div>
         {this.state.visible && (
-          <div className="h-100 d-flex align-items-center justify-content-center participantsAnimate">
+          <div className="h-100 d-flex align-items-center justify-content-center participantsAnimate ">
             <div className="participantsImage d-flex align-items-center justify-content-center overflow-hidden pointer">
-              <img src={prof1} alt="participants"></img>
+              <img src={prof1} alt="participants" className=" "></img>
             </div>
             <div className="participantsImage d-flex align-items-center justify-content-center overflow-hidden pointer">
               {" "}
